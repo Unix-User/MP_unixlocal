@@ -3,6 +3,6 @@
 This is the main project of my website(https://unixlocal.ml)
 
 To do:
-- upload image;
+- upload images system
 - system tab functions
-- create user with validation
+- create user with email validation
