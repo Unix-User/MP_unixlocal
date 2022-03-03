@@ -1,0 +1,29 @@
+{
+    "name": "tika/microframework",
+    "description": "framework para gestão de negocios, produtos e estoque",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Weverton S Lima",
+            "email": "wevertonslima@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/"
+        }
+    },
+    "require": {
+        "php": ">=7.2.5",
+        "mercadopago/dx-php": "^2.2",
+        "phpmailer/phpmailer": "^6.1",
+<<<<<<< HEAD
+=======
+        "illuminate/database": "^8.33",
+        "illuminate/http": "^8.33",
+>>>>>>> 9bea1914135cd8f3ef17842b3666c67828bf44cd
+        "league/flysystem": "^2.0"
+    }
+}

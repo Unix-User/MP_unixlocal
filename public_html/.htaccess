@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Displaying PHP errors
+#php_flag display_errors on
+#php_value error_reporting 6143
+
+# Displaying internal server errors
+#php_value display_errors 1
+
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+#RewriteBase /
+#RewriteRule ^index\.php$ – [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+
+#RewriteRule . /index.php [L]
+=======
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Displaying PHP errors
+#php_flag display_errors on
+#php_value error_reporting 6143
+
+# Displaying internal server errors
+#php_value display_errors 1
+
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+#RewriteBase /
+#RewriteRule ^index\.php$ – [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+
+#RewriteRule . /index.php [L]
+>>>>>>> 9bea1914135cd8f3ef17842b3666c67828bf44cd
+</IfModule>
