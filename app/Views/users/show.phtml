@@ -60,39 +60,10 @@ foreach ($this->view->users as $client) {
 <div class="card-deck">
     <?php if ($this->view->user->owner->name == $this->view->user->name) : ?>
         <div class="card col-sm-4 bg-custom">
-<<<<<<< HEAD
             <div>
                 <div class="card-header">
                     <span class="icon alt fa-user-plus"></span>
                     <span class="card-title"><strong> Administrador</strong></span>
-=======
-            <div class="card-header">
-                <span class="icon alt fa-user-plus"></span>
-                <span class="card-title"><strong> Administrador</strong></span>
-            </div>
-            <div>
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-clients-tab" data-toggle="tab" href="#nav-clients" role="tab" aria-controls="nav-clients" aria-selected="true">Clientes</a>
-                        <a class="nav-item nav-link" id="nav-billing-tab" data-toggle="tab" href="#nav-billing" role="tab" aria-controls="nav-billing" aria-selected="true">Faturamento</a>
-                    </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade active" id="nav-clients" style="width: auto; height: 100%;" role="tabpanel" aria-labelledby="nav-clients-tab">
-                        <div id="piechart" style="width: auto; height: 100%;"></div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-billing" style="width: auto; height: 100%;" role="tabpanel" aria-labelledby="nav-billing-tab">
-                        <div class="card-body">
-                            <h5 class="card-title">Faturamento estimado</h5>
-                            <p class="card-text">Essa é a estimativa calculada de acordo com os registros feitos no banco de dados.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-custom">Recebido: <?php echo 'R$ ' . $billing; ?></li>
-                            <li class="list-group-item bg-custom">A receber: <?php echo 'R$ ' . $future; ?></li>
-                            <li class="list-group-item bg-custom">Em Atraso: <?php echo 'R$ ' . $debt; ?></li>
-                        </ul>
-                    </div>
->>>>>>> 9bea1914135cd8f3ef17842b3666c67828bf44cd
                 </div>
             </div>
         </div>
@@ -194,7 +165,6 @@ foreach ($this->view->users as $client) {
                 <li><a href="/user/<?php echo $user->id ?>/edit" class="button special small">Editar</a></li>
             </ul>
         </div>
-<<<<<<< HEAD
     </div>
 
 </div>
@@ -365,53 +335,3 @@ foreach ($this->view->users as $client) {
         }
     </script>
 <?php endif; ?>
-=======
-    </div>
-</div>
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-    google.charts.load('current', {
-        'packages': ['corechart']
-    });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-        var clients = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Ativos', <?php echo $active; ?>],
-            ['Expirados', <?php echo $expired; ?>],
-            ['Bloqueados', <?php echo $blocked; ?>]
-        ]);
-
-        var options = {
-            title: 'Relatrio dos clientes',
-            titleTextStyle: {
-                bold: true,
-                // The color of the text.
-                color: 'white'
-            },
-            legend: {
-                position: 'bottom',
-                textStyle: {
-                    bold: true,
-                    // The color of the text.
-                    color: 'white'
-                }
-            },
-            backgroundColor: {
-                fill: 'transparent'
-            }
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(clients, options);
-    }
-</script>
-
-<script>
-    $('#nav-tab a[href="#nav-clients"]').tab('show')
-</script>
->>>>>>> 9bea1914135cd8f3ef17842b3666c67828bf44cd

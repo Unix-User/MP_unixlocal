@@ -1,10 +1,11 @@
 <?php
+/*
 if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == 'off') {
     $redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     header('HTTP/1.1 301 Moved Permanently');
     header('Location: ' . $redirect);
     exit();
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -58,7 +59,8 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == 'off') {
         </div>
 
         <!-- Scripts -->
-        <script> window.intergramId = "1061417621"
+        <script> window.intergramId = "-1001605193657"
+        window.intergramServer = "https://unixat.herokuapp.com"
         window.intergramCustomizations = {
         titleClosed: 'Precisa de ajuda?',
         titleOpen: 'Atendimento e Suporte',
@@ -70,7 +72,8 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == 'off') {
         alwaysUseFloatingButton: true // Use the mobile floating button also on large screens
         };
         </script>
-        <script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+        <script id="intergram" type="text/javascript" src="https://unixat.herokuapp.com/js/widget.js"></script>
+        <!-- <script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script> -->
         <script src="/assets/js/jquery.min.js"></script>
         <script src="/assets/js/jquery.scrolly.min.js"></script>
         <script src="/assets/js/jquery.dropotron.min.js"></script>

@@ -80,7 +80,7 @@ class Route {
                     $routeArray[$i] = $urlArray[$i];
                     $param[] = $urlArray[$i];
                 }
-                $route[0] = implode('/', $routeArray);
+                $route[0] = implode($routeArray, '/');
             }
             if($url == $route[0]){
                 $found = true;
@@ -93,7 +93,7 @@ class Route {
                 break;
             }
         }
-        if (isset($found)) {
+        if ($found) {
             $controller = Container::newController($controller);
             switch (count($param)) {
                 case 1:

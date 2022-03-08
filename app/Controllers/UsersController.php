@@ -259,7 +259,7 @@ class UsersController extends BaseController
             $this->renderView('users/device', '');
         } else {
             $this->view->users = $this->user->All();
-            //$this->view->usage = $usage;
+            $this->view->usage = $usage;
             $this->renderView('users/service', '');
         }
     }
