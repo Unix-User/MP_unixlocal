@@ -38,7 +38,7 @@ class User extends BaseModelElloquent {
         return [
             'name' => 'min:2|max:255|unique:User:name',
             'email' => 'email|unique:User:email',
-            'password' => 'required'|'min:4|max:60',
+            'password' => 'required|min:4|max:60',
             'phone' => 'min:9|max:14|unique:User:phone',
             'cep' => 'max:10'
         ];
