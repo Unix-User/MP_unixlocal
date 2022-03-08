@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 header("Content-Type: text/plain; charset=utf-8");
 if ($this->view->check == true) {
@@ -22,29 +21,4 @@ if ($this->view->check == true) {
             echo "|";
         }
     }
-=======
-<?php
-header("Content-Type: text/plain; charset=utf-8");
-if ($this->view->check == true) {
-    foreach ($this->view->users as $client) {
-        if ($client->owner_id == $this->view->auth) {
-            foreach ($client->category as $cat){
-                    $product = $cat->product;
-                    $productid = $cat->id;
-                    $rate = $cat->rate;
-                }
-            $data = [
-                'name' => $client->name,
-                'password' => $client->password,
-                'install_password' => $this->view->credential->install_password,
-                'category' => $product,
-                'rate' => $rate
-            ];
-            foreach($data as $key => $values ){
-                echo $values . ',';
-            }
-            echo "|";
-        }
-    }
->>>>>>> 9bea1914135cd8f3ef17842b3666c67828bf44cd
 }
